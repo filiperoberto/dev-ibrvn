@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML</title>
+  </head>
+  <body>
+    <h1>Pré introdução</h1>
+
+    <p>
+      Uma das questões que nos deparamos no desenvolvimento web é a "massaroca"
+      de tecnologias que estão envolvidas. Já vi muita gente entrando nesse meio
+      e se confundindo, não sabendo diferenciar direito quando está mexendo com
+      HTML ou com javascript ou com CSS ou com alguma biblioteca envolvida.
+    </p>
+
+    <p>
+      Por isso achei por bem explicar um pouco de cada um separadamento para que
+      tenhamos a visão de como um interage com o outro, e quando precisarmos,
+      vamos saber melhor com o que estamos lidando, se é questão de mexer no
+      HTML, ou no CSS e etc.
+    </p>
+
+    <h1>Introdução ao HTML</h1>
+    <h2>O que é?</h2>
+    <p>
+      HTML é uma linguagem de marcação. De forma semelhante a quando criamos um
+      documento no word por exemplo, onde existem títulos, parágrafos, listas,
+      citações, tabelas e etc. Também o HTML nos permite criar documentos e
+      formatá-los da maneira que precisarmos.
+    </p>
+
+    <h2>Ilustração do corpo humano</h2>
+
+    <img
+      src="https://www.alura.com.br/artigos/assets/html-css-js/imagem-4.png"
+      alt="Ilustração comparando o HTML ao esqueleto"
+    />
+
+    <h2>Estrutura básica do HTML</h2>
+
+    <pre>
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+  &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  
+  &lt;h1&gt;My First Heading&lt;/h1&gt;
+  &lt;p&gt;My first paragraph.&lt;/p&gt;
+  
+  &lt;/body&gt;
+  &lt;/html&gt;
+  </pre
+    >
+
+    <h3>Estrutura das tags</h3>
+
+    <img
+      src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*7wzysqclJLByh6qT1yqAnQ.png"
+      alt=""
+    />
+
+    <p>
+      * Os atributos <strong><code>class</code></strong> e
+      <strong><code>id</code></strong> serão importantes depois para aplicar CSS
+      e javscript
+    </p>
+    <h3>O HTML possui:</h3>
+
+    <ul>
+      <li>Tags visíveis</li>
+      <li>Tags não visíveis</li>
+      <ul>
+        <li>Metadados</li>
+        <li>Elementos escondidos</li>
+        <li>Tags de importação de CSS/javascript</li>
+      </ul>
+    </ul>
+
+    <h3>
+      O Navegador já aplica um estilo padrão para alguns elementos, mesmo sem
+      CSS
+    </h3>
+
+    A tag <strong>strong</strong> por exemplo, aplica negrito, as tags de h (h1,
+    h2, h3 ...) aplicam uma margem e tamanho de fonte diferente ao texto.
+
+    <h4>Posicionamento:</h4>
+
+    Uma questão importante no HTML e depois no CSS, é o posicionamento. Como
+    posicionar um elemento em determinado lugar na tela? Duas formas de
+    posicionamento importantes no HTML são inline e block.
+
+    <div>A div é um elemento HTML</div>
+    <div>que por padrão</div>
+    <div>Tem posiciomanemto block</div>
+    <div>Ou seja, ele "bloqueia" a linha onde ele está</div>
+    <div>Não permitindo que outros elementos sejam posicionanos</div>
+    <div>Na mesma linha</div>
+    <span>Por outro lado</span>
+    <span>o span é um elemento inline,</span>
+    <span>eu posso colocar vários elementos inline</span>
+    <span>e eles ficarão posicionados na mesma linha,</span>
+    <span>a não ser que o tamanho da linha acabe</span>
+    <span>neste caso, o elemento será jogado para baixo</span>
+
+    <p>
+      Na página do
+      <a target="_blank" href="https://www.w3schools.com/html/html_blocks.asp"
+        >w3schools</a
+      >
+      tem uma lista de elementos que por padrão são block ou inline
+    </p>
+
+    <h3>Interação com elementos</h3>
+
+    <p>
+      É possível o usuário interagir com algumas tags html. Ou seja, elas
+      possuem funcionalidade especial, não somente de formatação de texto.
+    </p>
+
+    <p>
+      Por exemplo a tag <code>&lt;a&gt;</code> cria um link com outra página.
+    </p>
+
+    <p>Uma parte importante também do HTML são os formulários</p>
+
+    <p>
+      <input type="text" value="As inputs" /> permitem entrada de valores
+      menores de texto
+    </p>
+
+    <p>
+      Existem inputs de números:
+      <input type="number" min="0" max="1000" value="500" />
+    </p>
+    <p>
+      De cores:
+      <input type="color" />
+    </p>
+    <p>
+      De data:
+      <input type="date" />
+    </p>
+    <p>
+      Para uma lista completa de inputs disponíveis ver em:
+      <a href="https://www.w3schools.com/html/html_form_input_types.asp"
+        >HTML Input Types</a
+      >
+    </p>
+
+    <p>
+      <textarea name="" id="" cols="30" rows="10">
+Para estrada de textos maiores, existe a textarea</textarea
+      >
+    </p>
+
+    <p>
+      <select name="" id="">
+        <option>O select</option>
+        <option value="">também é um tipo</option>
+        <option value="">legal de input</option>
+        <option value="">com valores pré-definidos</option>
+        <option value="">para seleção</option>
+      </select>
+    </p>
+
+    O <button>Botão</button> também tem várias funções programáveis por
+    javascript.
+
+    <h2>Exercícios Práticos</h2>
+
+    Criar uma página HTML contendo:
+
+    <ol>
+      <li>Títulos e parágrafos</li>
+      <li>Uma lista numerada e não numerada</li>
+      <li>Uma tabela</li>
+      <li>Uma imagem</li>
+      <li>Um link para uma página qualquer</li>
+      <li>
+        Um formulário para cadastro de pessoas (nome, idade, sexo, data de
+        nascimento)
+      </li>
+    </ol>
+
+    <h2>Referências</h2>
+
+    <ul>
+      <li>
+        <a href="https://www.w3schools.com/html/default.asp"
+          >HTML Tutorial do W3Schools</a
+        >
+      </li>
+      <li>
+        <a href="https://codepen.io/">O Codepen</a> é uma ferramenta legal para
+        mexer em HTML/CSS/javascript sem precisar instalar nenhuma ferramenta de
+        edição de código.
+      </li>
+    </ul>
+
+    <h2>Bônus</h2>
+
+    <p>Se desafiar geralmente é uma boa forma de aprender.</p>
+
+    <ul>
+      <li>Será que consigo deixar o site mais bonito?</li>
+      <li>Será que consigo mesclar colunas/linhas da tabela?</li>
+      <li>
+        Brincar um pouco com posicionamento, colocar duas imagens, uma ao lado
+        da outra e um abaixo da outra
+      </li>
+      <li>
+        Questão do
+        <a
+          target="_blank"
+          href="https://informativo.ibrvn.com.br/index.php?edicao=549&interno=kbPMQH3PyjQzzwhf"
+          >informativo*</a
+        >
+      </li>
+    </ul>
+  </body>
+</html>

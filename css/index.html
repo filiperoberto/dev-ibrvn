@@ -10,28 +10,29 @@
     />
     <link rel="stylesheet" href="styel.css" />
     <style>
-        #pseudo-elemento::before {
-            content: "=)";
-            color: red;
-            margin-right: 10px;
-        }
+      #pseudo-elemento::before {
+        content: "=)";
+        color: red;
+        margin-right: 10px;
+      }
 
-        [atributo-qualquer='coisa'] {
-            color: blue;
-        }
+      [atributo-qualquer="coisa"] {
+        color: blue;
+      }
 
-        #pseudo-classe:hover {
-            background: black;
-            color: white;
-        }
-
+      #pseudo-classe:hover {
+        background: black;
+        color: white;
+      }
     </style>
   </head>
   <body>
     <div class="container">
-
       <div class="slide main" id="1">
         <h1 class="title">CSS</h1>
+        <nav class="local-navigation">
+          <a class="next-page" href="#2">></a>
+        </nav>
       </div>
 
       <div class="slide" id="2">
@@ -45,6 +46,10 @@ seletor {
     propriedade: valor;
 }</pre
         >
+        <nav class="local-navigation">
+          <a class="next-page" href="#3">></a>
+          <a class="prev-page" href="#1"><</a>
+        </nav>
       </div>
 
       <div class="slide" id="3">
@@ -54,11 +59,19 @@ seletor {
           <li><a href="#5">Interno</a></li>
           <li><a href="#6">Externo</a></li>
         </ul>
+        <nav class="local-navigation">
+          <a class="next-page" href="#4">></a>
+          <a class="prev-page" href="#2"><</a>
+        </nav>
       </div>
 
       <div class="slide" id="4">
         <h1 class="title">CSS Inline</h1>
         <pre>&lt;h1 <span class="destaque">style='background: #fbfb73;'</span>&gt;My First Heading&lt;/h1&gt;</pre>
+        <nav class="local-navigation">
+          <a class="next-page" href="#5">></a>
+          <a class="prev-page" href="#3"><</a>
+        </nav>
       </div>
 
       <div class="slide" id="5">
@@ -82,6 +95,10 @@ h1 {
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+        <nav class="local-navigation">
+          <a class="next-page" href="#6">></a>
+          <a class="prev-page" href="#4"><</a>
+        </nav>
       </div>
 
       <div class="slide" id="6">
@@ -97,6 +114,10 @@ h1 {
 ...
             </pre>
         <img src="img/css_externo.png" alt="" />
+        <nav class="local-navigation">
+          <a class="next-page" href="#7">></a>
+          <a class="prev-page" href="#5"><</a>
+        </nav>
       </div>
 
       <div class="slide" id="7">
@@ -107,6 +128,10 @@ h1 {
           "busca" por um ou mais elementos específicos em meio a todas tags do
           documento HTML.
         </p>
+        <nav class="local-navigation">
+          <a class="next-page" href="#8">></a>
+          <a class="prev-page" href="#6"><</a>
+        </nav>
       </div>
 
       <div class="slide" id="8">
@@ -117,6 +142,10 @@ h1 {
           <li><a href="#11">Classe</a></li>
           <li><a href="#12">Outros</a></li>
         </ul>
+        <nav class="local-navigation">
+          <a class="next-page" href="#9">></a>
+          <a class="prev-page" href="#7"><</a>
+        </nav>
       </div>
 
       <div class="slide" id="9">
@@ -129,6 +158,10 @@ h1 {
     <span class="destaque">&lt;li&gt;Terra&lt;/li&gt;</span>
     <span class="destaque">&lt;li&gt;Marte&lt;/li&gt;</span>
 &lt;/ul&gt;</pre>
+        <nav class="local-navigation">
+          <a class="next-page" href="#10">></a>
+          <a class="prev-page" href="#8"><</a>
+        </nav>
       </div>
 
       <div class="slide" id="10">
@@ -141,6 +174,10 @@ h1 {
     <span class="destaque">&lt;li id='terra'&gt;Terra&lt;/li&gt;</span>
     &lt;li&gt;Marte&lt;/li&gt;
 &lt;/ul&gt;</pre>
+        <nav class="local-navigation">
+          <a class="next-page" href="#11">></a>
+          <a class="prev-page" href="#9"><</a>
+        </nav>
       </div>
 
       <div class="slide" id="11">
@@ -153,15 +190,43 @@ h1 {
     <span class="destaque">&lt;li class='planeta' id='terra'&gt;Terra&lt;/li&gt;</span>
     <span class="destaque">&lt;li class='planeta'&gt;Marte&lt;/li&gt;</span>
 &lt;/ul&gt;</pre>
+
+        <nav class="local-navigation">
+          <a class="next-page" href="#12">></a>
+          <a class="prev-page" href="#10"><</a>
+        </nav>
       </div>
 
       <div class="slide" id="12">
         <h1 class="title">Outros</h1>
         <ul>
-            <li id="pseudo-elemento"><a target="_blank" href="https://www.w3schools.com/css/css_pseudo_elements.asp">Pseudo elementos</a></li>
-            <li atributo-qualquer='coisa'><a target="_blank" href="https://www.w3schools.com/css/css_attribute_selectors.asp">Atributo</a></li>
-            <li id="pseudo-classe"><a target="_blank" href="https://www.w3schools.com/css/css_pseudo_classes.asp">Pseudo classe</a></li>
+          <li id="pseudo-elemento">
+            <a
+              target="_blank"
+              href="https://www.w3schools.com/css/css_pseudo_elements.asp"
+              >Pseudo elementos</a
+            >
+          </li>
+          <li atributo-qualquer="coisa">
+            <a
+              target="_blank"
+              href="https://www.w3schools.com/css/css_attribute_selectors.asp"
+              >Atributo</a
+            >
+          </li>
+          <li id="pseudo-classe">
+            <a
+              target="_blank"
+              href="https://www.w3schools.com/css/css_pseudo_classes.asp"
+              >Pseudo classe</a
+            >
+          </li>
         </ul>
+
+        <nav class="local-navigation">
+          <a class="next-page" href="#13">></a>
+          <a class="prev-page" href="#11"><</a>
+        </nav>
       </div>
     </div>
   </body>

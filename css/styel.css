@@ -12,6 +12,27 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.local-navigation {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+}
+
+.local-navigation a {
+    font-weight: bold;
+}
+
+.local-navigation a:visited,
+.local-navigation a:link {
+    text-decoration: none;
+    color: black;
+}
+
+.local-navigation .next-page {
+    float: right;
+}
+
 .nav {
     position: fixed;
     width: 100%;

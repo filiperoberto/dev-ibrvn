@@ -24,12 +24,32 @@
         background: black;
         color: white;
       }
+
+      .go-to-top {
+        position: fixed;
+        font-weight: bold;
+        border-radius: 100%;
+        background: #ccc;
+        bottom: 10px;
+        right: 10px;
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+        width: 50px;
+        height: 50px;
+      }
+
+      .go-to-top a {
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
     <div class="container">
+      <span class="go-to-top"><a href="#1">🔝</a></span>
+
       <div class="slide main" id="1">
-        <h1 class="title">CSS</h1>
+        <h1>CSS</h1>
         <nav class="local-navigation">
           <a class="next-page" href="#2">></a>
         </nav>
@@ -123,7 +143,7 @@ h1 {
       <div class="slide" id="7">
         <h1 class="title">Seletores</h1>
         <p>
-          Uma parte importante ao aplica o CSS é selecionar qual elemento/tag
+          Uma parte importante ao aplicar o CSS é selecionar qual elemento/tag
           queremos aplicar o estilo. Os Seletores servem como uma forma de
           "busca" por um ou mais elementos específicos em meio a todas tags do
           documento HTML.
@@ -157,6 +177,7 @@ h1 {
     <span class="destaque">&lt;li&gt;V&ecirc;nus&lt;/li&gt;</span>
     <span class="destaque">&lt;li&gt;Terra&lt;/li&gt;</span>
     <span class="destaque">&lt;li&gt;Marte&lt;/li&gt;</span>
+    <span class="destaque">&lt;li&gt;Plutão&lt;/li&gt;</span>
 &lt;/ul&gt;</pre>
         <nav class="local-navigation">
           <a class="next-page" href="#10">></a>
@@ -173,6 +194,7 @@ h1 {
     &lt;li&gt;V&ecirc;nus&lt;/li&gt;
     <span class="destaque">&lt;li id='terra'&gt;Terra&lt;/li&gt;</span>
     &lt;li&gt;Marte&lt;/li&gt;
+    &lt;li&gt;Plutão&lt;/li&gt;
 &lt;/ul&gt;</pre>
         <nav class="local-navigation">
           <a class="next-page" href="#11">></a>
@@ -189,6 +211,7 @@ h1 {
     <span class="destaque">&lt;li class='planeta'&gt;V&ecirc;nus&lt;/li&gt;</span>
     <span class="destaque">&lt;li class='planeta' id='terra'&gt;Terra&lt;/li&gt;</span>
     <span class="destaque">&lt;li class='planeta'&gt;Marte&lt;/li&gt;</span>
+    &lt;li class='nao-eh-planeta😞'&gt;Plutão&lt;/li&gt;
 &lt;/ul&gt;</pre>
 
         <nav class="local-navigation">
@@ -226,6 +249,731 @@ h1 {
         <nav class="local-navigation">
           <a class="next-page" href="#13">></a>
           <a class="prev-page" href="#11"><</a>
+        </nav>
+      </div>
+
+      <div class="slide" id="13">
+        <h1 class="title">Combinações</h1>
+        <h2>Descendente</h2>
+        <pre>
+div p { 
+  background: yellow;
+}</pre
+        >
+        <pre>&lt;p&gt;Um par&aacute;grafo fora da div&lt;/p&gt;
+&lt;div&gt;
+  <span class="destaque">&lt;p&gt;Um par&aacute;grafo dentro da div&lt;/p&gt;</span>
+  <span class="destaque">&lt;p&gt;Outro par&aacute;grafo dentro da div&lt;/p&gt;</span>
+  &lt;span&gt;
+    <span class="destaque">&lt;p&gt;Um par&aacute;grafo dentro da div dentro do span&lt;/p&gt;</span>
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Outro par&aacute;grafo fora da div&lt;/p&gt;</pre>
+        <nav class="local-navigation">
+          <a class="next-page" href="#14">></a>
+          <a class="prev-page" href="#12"><</a>
+        </nav>
+      </div>
+
+      <div class="slide" id="14">
+        <h1 class="title">Combinações</h1>
+        <h2>Filho direto</h2>
+        <pre>
+div > p { 
+  background: yellow;
+}</pre
+        >
+        <pre>&lt;p&gt;Um par&aacute;grafo fora da div&lt;/p&gt;
+&lt;div&gt;
+  <span class="destaque">&lt;p&gt;Um par&aacute;grafo dentro da div&lt;/p&gt;</span>
+  <span class="destaque">&lt;p&gt;Outro par&aacute;grafo dentro da div&lt;/p&gt;</span>
+  &lt;span&gt;
+    &lt;p&gt;Um par&aacute;grafo dentro da div dentro do span&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Outro par&aacute;grafo fora da div&lt;/p&gt;</pre>
+        <nav class="local-navigation">
+          <a class="next-page" href="#15">></a>
+          <a class="prev-page" href="#13"><</a>
+        </nav>
+      </div>
+
+      <div class="slide" id="15">
+        <h1 class="title">Combinações</h1>
+        <h2>Irmão adjacente</h2>
+        <pre>
+p + p { 
+  background: yellow;
+}</pre
+        >
+        <pre>&lt;p&gt;Um par&aacute;grafo fora da div&lt;/p&gt;
+&lt;div&gt;
+  &lt;p&gt;Um par&aacute;grafo dentro da div&lt;/p&gt;
+  <span class="destaque">&lt;p&gt;Outro par&aacute;grafo dentro da div&lt;/p&gt;</span>
+  &lt;span&gt;
+    &lt;p&gt;Um par&aacute;grafo dentro da div dentro do span&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Outro par&aacute;grafo fora da div&lt;/p&gt;
+<span class="destaque">&lt;p&gt;Mais um par&aacute;grafo fora da div&lt;/p&gt;</span></pre>
+        <nav class="local-navigation">
+          <a class="next-page" href="#16">></a>
+          <a class="prev-page" href="#14"><</a>
+        </nav>
+      </div>
+
+      <div class="slide" id="16">
+        <h1 class="title">Combinações</h1>
+        <h2>Irmão em geral</h2>
+        <pre>
+p ~ p { 
+  background: yellow;
+}</pre
+        >
+        <pre>&lt;p&gt;Um par&aacute;grafo fora da div&lt;/p&gt;
+&lt;div&gt;
+  &lt;p&gt;Um par&aacute;grafo dentro da div&lt;/p&gt;
+  &lt;span&gt;
+    &lt;p&gt;Um par&aacute;grafo dentro da div dentro do span&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+<span class="destaque">&lt;p&gt;Outro par&aacute;grafo fora da div&lt;/p&gt;</span>
+<span class="destaque">&lt;p&gt;Mais um par&aacute;grafo fora da div&lt;/p&gt;</span></pre>
+        <nav class="local-navigation">
+          <a class="next-page" href="#17">></a>
+          <a class="prev-page" href="#15"><</a>
+        </nav>
+      </div>
+
+      <div class="slide" id="17">
+        <h1 class="title">Posicionamento block</h1>
+        <style>
+          .block {
+            width: 100px;
+            height: 100px;
+            background: red;
+            display: block;
+            margin: 10px;
+          }
+        </style>
+        <pre>
+div.block { 
+  width: 100px;
+  height: 100px;
+  background: red;
+  <span class="comentario">/* display: block; *//* Aqui eu não preciso do display: block; pq a div já tem comportamento block*/</span>
+  margin: 10px;
+}</pre>
+        <div class="block"></div>
+        <div class="block"></div>
+        <nav class="local-navigation">
+          <a class="next-page" href="#18">></a>
+          <a class="prev-page" href="#16"><</a>
+        </nav>
+      </div>
+
+      <div class="slide" id="18">
+        <h1 class="title">Posicionamento inline</h1>
+        <style>
+          .inline-block {
+            width: 100px;
+            height: 100px;
+            background: red;
+            display: inline-block;
+            margin: 10px;
+          }
+        </style>
+        <pre>
+.inline-block { 
+  width: 100px;
+  height: 100px;
+  background: red;
+  <span class="destaque">display: inline-block;</span>
+  margin: 10px;
+}</pre>
+        <p>
+          * O inline sozinho não aceita que se coloque um tamanho pré-definido,
+          então coloquei inline<span class="destaque"> -block</span> para poder
+          adicionar um tamanho aos quadrados
+        </p>
+        <div class="inline-block"></div>
+        <div class="inline-block"></div>
+        <nav class="local-navigation">
+          <a class="next-page" href="#19">></a>
+          <a class="prev-page" href="#17"><</a>
+        </nav>
+      </div>
+
+      <div class="slide" id="19">
+        <h1 class="title">Posicionamento relative</h1>
+        <style>
+          .position-relative {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            left: 100px;
+            top: 200px;
+          }
+        </style>
+        <pre>.position-relative {
+  width: 100px;
+  height: 100px;
+  background: red;
+  <span class="destaque">position: relative;</span>
+  left: 100px;
+  top: 200px;
+}</pre>
+        <div class="position-relative"></div>
+        <nav class="local-navigation">
+          <a class="next-page" href="#20">></a>
+          <a class="prev-page" href="#18"><</a>
+        </nav>
+      </div>
+
+      <div class="slide" id="20">
+        <h1 class="title">Posicionamento absolute</h1>
+        <style>
+          .position-absolute {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+          }
+        </style>
+        <pre>.position-absolute {
+  width: 100px;
+  height: 100px;
+  background: red;
+  <span class="destaque">position: absolute;</span>
+  left: 10px;
+  top: 10px;
+}</pre>
+        <div class="position-absolute"></div>
+        <nav class="local-navigation">
+          <a class="next-page" href="#21">></a>
+          <a class="prev-page" href="#19"><</a>
+        </nav>
+      </div>
+
+      <div class="slide" id="21">
+        <h1 class="title">Posicionamento fixed</h1>
+        <style>
+          .position-fixed {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+          }
+        </style>
+        <pre>.position-fixed {
+  <span class="destaque">position: fixed;</span>
+  bottom: 10px;
+  left: 10px;
+}</pre>
+        <nav class="local-navigation">
+          <a class="next-page" href="#22">></a>
+          <a class="prev-page" href="#20"><</a>
+        </nav>
+      </div>
+
+      <div class="slide" id="22">
+        <h1 class="title">Posicionamento float</h1>
+        <style>
+          .img-float {
+            float: right;
+          }
+        </style>
+        <pre>.img-float {
+  <span class="destaque">float: right;</span>
+}</pre>
+        <div class="clearfix">
+          <img
+            class="img-float"
+            src="https://www.w3schools.com/css/pineapple.jpg"
+            alt=""
+          />
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply
+            dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the industry's standard dummy text ever since the 1500s, when
+            an unknown printer took a galley of type and scrambled it to make a
+            type specimen book. It has survived not only five centuries, but
+            also the leap into electronic typesetting, remaining essentially
+            unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently
+            with desktop publishing software like Aldus PageMaker including
+            versions of Lorem Ipsum.
+          </p>
+        </div>
+        <nav class="local-navigation">
+          <a class="next-page" href="#23">></a>
+          <a class="prev-page" href="#21"><</a>
+        </nav>
+      </div>
+
+      <div class="slide" id="23">
+        <h1 class="title">Posicionamento float clearfix*</h1>
+        <style>
+          .clearfix {
+            /*overflow: auto;*/
+            border: 2px solid black;
+          }
+        </style>
+        <pre>.clearfix {
+  <span class="destaque">/*overflow: auto;*/</span>
+  border: 2px solid black;
+}</pre>
+        <div class="clearfix">
+          <img
+            class="img-float"
+            src="https://www.w3schools.com/css/pineapple.jpg"
+            alt=""
+          />
+          <p>Lorem Ipsum is simply dummy text of the printing and</p>
+        </div>
+        <nav class="local-navigation">
+          <a class="next-page" href="#24">></a>
+          <a class="prev-page" href="#22"><</a>
+        </nav>
+      </div>
+
+      <div class="slide" id="24">
+        <h1 class="title">Posicionamento flex</h1>
+        <style>
+          .flex-item {
+            background: red;
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            color: white;
+            text-align: center;
+          }
+          .flex {
+            display: flex;
+            height: 200px;
+            border: 2px solid black;
+          }
+        </style>
+        <div class="flex">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+        </div>
+        <nav class="local-navigation">
+          <a class="next-page" href="#25">></a>
+          <a class="prev-page" href="#23"><</a>
+        </nav>
+      </div>
+
+      <div class="slide desafio-1" id="25">
+        <h1 class="title">Desafio 1</h1>
+
+        <style>
+          .desafio-1 .wrapper {
+            width: 100%;
+            height: 500px;
+            display: flex;
+            padding: 10px;
+            background: wheat;
+          }
+
+          .desafio-1 .menu-lateral {
+            background: #81b7b7;
+            width: 200px;
+          }
+
+          .desafio-1 .area-principal {
+            background: aliceblue;
+            flex-grow: 1;
+            margin-left: 10px;
+          }
+        </style>
+        <div class="wrapper">
+          <div class="menu-lateral"></div>
+          <div class="area-principal"></div>
+        </div>
+
+        <nav class="local-navigation">
+          <a class="next-page" href="#26">></a>
+          <a class="prev-page" href="#24"><</a>
+        </nav>
+      </div>
+
+      <div class="slide desafio-2" id="26">
+        <h1 class="title">Desafio 2</h1>
+
+        <style>
+          .desafio-2 .wrapper {
+            width: 100%;
+            height: 500px;
+            display: flex;
+            padding: 10px;
+            background: wheat;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .desafio-2 .area-principal {
+            background: aliceblue;
+            width: 200px;
+            height: 200px;
+          }
+        </style>
+        <div class="wrapper">
+          <div class="area-principal"></div>
+        </div>
+
+        <nav class="local-navigation">
+          <a class="next-page" href="#27">></a>
+          <a class="prev-page" href="#25"><</a>
+        </nav>
+      </div>
+
+      <div class="slide desafio-3" id="27">
+        <h1 class="title">Desafio 3</h1>
+
+        <style>
+          .desafio-3 .wrapper {
+            width: 100%;
+            height: 500px;
+            padding: 10px;
+            background: wheat;
+            position: relative;
+          }
+
+          .desafio-3 .area-principal {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: aliceblue;
+            width: 200px;
+            height: 200px;
+          }
+        </style>
+        <div class="wrapper">
+          <div class="area-principal"></div>
+        </div>
+
+        <nav class="local-navigation">
+          <a class="next-page" href="#28">></a>
+          <a class="prev-page" href="#26"><</a>
+        </nav>
+      </div>
+
+      <div class="slide desafio-4" id="28">
+        <h1 class="title">Desafio 4 (pixel art)</h1>
+
+        <style>
+          .desafio-4 .wrapper {
+            width: 100%;
+            height: 700px;
+            padding: 10px;
+            background: wheat;
+            position: relative;
+          }
+
+          .desafio-4 .grid {
+            width: 600px;
+            margin: auto;
+          }
+
+          .desafio-4 .box {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: white;
+            cursor: pointer;
+          }
+
+          .desafio-4 .pixel-form {
+            text-align: center;
+            margin-bottom: 20px;
+          }
+
+          .desafio-4 .pixel-form label {
+            cursor: pointer;
+          }
+        </style>
+        <div class="wrapper">
+          <div class="pixel-form">
+            <label for="input-cor">Escolha a cor: </label>
+            <input id='input-cor' type="color" value="#ffffff">
+          </div>
+          <div class="grid">
+
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+          </div>
+        </div>
+
+        <nav class="local-navigation">
+          <a class="prev-page" href="#26"><</a>
         </nav>
       </div>
     </div>
